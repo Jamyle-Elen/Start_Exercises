@@ -44,15 +44,3 @@ console.log(`Valor diária: ${diariaAlugel}`);
 console.log(`Valor por KM: ${valorPorKm}`);
 console.log(`Dias: ${diasAlugado}`);
 console.log(`Você gastou R$ ${gastoTotal.toFixed(2)} com esse aluguel`);
-
-
-// 6. Crie um programa que leia o número de dias trabalhados em um mês e mostre o salário. Sabendo que ele trabalha 8 horas por dia e ganha R$25 por hora trabalhada.
-
-let diasTrabalhados = 24;
-let horasDia = 8;
-let valorDia = 25;
-let salario = (horasDia * valorDia) * diasTrabalhados;
-
-console.log(`Você recebeu.: R$ ${salario.toFixed(2)}`);
-
-
