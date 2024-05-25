@@ -9,15 +9,23 @@
 // let sumNumbers = numbers.reduce((acc, curr) => acc + curr, 0);
 // alert(`Soma dos números.: ${sumNumbers}`);
 
-//
+// Soma entre números digitados, adicionado condição de sair com o 0
 let numbers = [];
+let continued = true;
 
-for(let i = 0; i < 100; i++) {
-    let num = parseInt(prompt("Digite um número: "));
-    if (num === 0) {
-        break;
+for(let i = 0; continued; i++) {
+    let num = parseInt(prompt("Digite um número (utiize '0' para sair): "));
+
+    while (num === "" || isNaN(num)) {
+        alert("Valor inválido, digite um valor inteiro.");
+        num = parseInt(prompt("Digite um número (utiize '0' para sair): "));
     }
-    numbers.push(num);
+
+    if (num === 0) {
+        continued = false;
+    } else {
+        numbers.push(num);
+    }
 }
 
 let sumNumbers = numbers.reduce((acc, curr) => acc + curr, 0);
