@@ -1,3 +1,4 @@
+// Soma entre os números digitados
 let numbers = [];
 
 for (let i = 0; i < 10; i++) {
