@@ -26,3 +26,36 @@ console.log("Valores: ");
 for (let i = 0; i < vetor3.length; i++) {
     console.log(i + " => " + vetor3[i]);
 }
+
+
+// Crie um programa que preencha automaticamente (usando lógica, não apenas atribuindo diretamente) um vetor numérico com 10 posições, conforme abaixo: (ficar alternando entre impar e par)
+let vetor4 = [];
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+        vetor.push(5);
+    } else {
+        vetor.push(3);
+    }
+}
+
+console.log("Valores do vetor:");
+for (let i = 0; i < vetor.length; i++) {
+    console.log(i + " => " + vetor[i]);
+}
+
+
+// Crie um programa que preencha automaticamente (usando lógica, não apenas  atribuindo diretamente) um vetor numérico com 15 posições com os primeiros elementos da sequencia Fibonacci;
+function fibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+
+    return fib;
+}
+
+    let vetorFibonacci = fibonacci(15);
+    console.log("Valores Fibonacci: ");
+    for (let i = 0; i < vetorFibonacci.length; i++) {
+    console.log(i + " => " + vetorFibonacci[i]);
+}
