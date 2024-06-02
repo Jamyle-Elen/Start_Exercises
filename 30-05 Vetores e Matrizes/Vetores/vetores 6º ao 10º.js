@@ -85,3 +85,19 @@ console.log(numbers);
 numbers.sort((a, b) => a - b);
 console.log(`Números em ordem crescente: `);
 console.log(numbers);
+
+//  9. Crie um programa que leia o nome e a idade de 9 pessoas e guarde esses valores em dois vetores, em posições relacionadas. No final, mostre uma listagem contendo apenas os dados das pessoas menores de idade.
+let names1 = [];
+let ages1 = [];
+
+for (let i = 0; i < 9; i++) {
+    let name = prompt(`Digite o nome da ${i + 1}º pessoa: `);
+    let age = parseInt(prompt(`Digite a idade da ${i + 1}º pessoa: `));
+    names1.push(name);
+    ages1.push(age);
+}
+
+console.log("Dados das pessoas de menores: ");
+for (let i = 0; i < names1.length; i++) {
+    ages1[i] < 18 ? console.log(`Nome: ${names1[i]}, Idade: ${ages1[i]}`) : null;
+}
