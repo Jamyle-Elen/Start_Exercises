@@ -107,7 +107,7 @@ let names2 = [];
 let sexes = [];
 let wages = [];
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < 5; i++) {
     let name = prompt(`Digite o nome do ${i + 1}º funcionário: `);
     let sex;
     
