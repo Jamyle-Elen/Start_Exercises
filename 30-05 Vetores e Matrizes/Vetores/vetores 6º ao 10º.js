@@ -75,3 +75,13 @@ for (let i = 0; i < grades.length; i++) {
 }
 console.log(`A maior nota é ${highestGrade} e ela se encontra nas posições: ${highestGradePositions.join("º, ")}º`);
 
+// 8. [DESAFIO] Crie uma lógica que preencha um vetor de 20 posições com números aleatórios (entre 0 e 99) gerados pelo computador. Logo em seguida, mostre os números gerados e depois coloque o vetor em ordem crescente, mostrando no final os valores ordenados.
+let numbers = [];
+for (let i = 0; i < 20; i++) {
+    let numRandom = Math.floor(Math.random() * 99);
+    numbers.push(numRandom);
+}
+console.log(numbers);
+numbers.sort((a, b) => a - b);
+console.log(`Números em ordem crescente: `);
+console.log(numbers);
