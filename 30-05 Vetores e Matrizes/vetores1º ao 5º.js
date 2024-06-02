@@ -83,7 +83,7 @@ console.log(`A média das idades das pessoas cadastradas é: ${average}`);
 let ageOver25 = [];
 
 for (let i = 0; i < ages.length; i++) {
-    ages[i] > 25 ? ageOver25.push(i) && console.log(`As pessoas com mais de 25 anos estão nas posições: ${ageOver25.join("º, ")} `) : null;
+    ages[i] > 25 ? ageOver25.push(i) && console.log(`As pessoas com mais de 25 anos estão nas posições: ${ageOver25.join("º, ")}º `) : null;
 }
 
 for (let i = 0; i < ageOver25.length; i++) {
@@ -96,7 +96,7 @@ let olderPositions = [];
 for (let i = 0; i < ages.length; i++) {
     ages[i] === older ? olderPositions.push(i) : null;
 }
-console.log(`A maior idade é ${older} e ela se encontra na ${olderPositions.join("º, ")} posição`);
+console.log(`A maior idade é ${older} e ela se encontra na ${olderPositions.join("º, ")}º posição`);
 
 
 /*  7. Faça um algoritmo que leia a nota de 10 alunos de uma turma e guarde-as em
@@ -117,7 +117,7 @@ for (let i = 0; i < grades.length; i++) {
     sum += grades[i];
 }
 let average = sum / grades.length;
-console.log(`A média da turma é: ${average.toFixed(2)}`);
+console.log(`A média da turma é: ${average.toFixed(1)}`);
 
 let aboveAverage = 0;
 for (let i = 0; i < grades.length; i++) {
@@ -134,4 +134,4 @@ for (let i = 0; i < grades.length; i++) {
         highestGradePositions.push(i);
     }
 }
-console.log(`A maior nota é ${highestGrade} e ela se encontra nas posições: ${highestGradePositions.join("º, ")}`);
+console.log(`A maior nota é ${highestGrade} e ela se encontra nas posições: ${highestGradePositions.join("º, ")}º`);
