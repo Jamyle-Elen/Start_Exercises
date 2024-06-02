@@ -105,9 +105,7 @@ console.log(`A maior idade é ${older} e ela se encontra na ${olderPositions.joi
     b) Quantos alunos estão acima da média da turma
     c) Qual foi a maior nota digitada
     d) Em que posições a maior nota aparece */
-
 let grades = [];
-
 
 for (let i = 0; i < 10; i++) {
     let grade = parseFloat(prompt(`Digite a nota do ${i + 1}º aluno:`));
