@@ -1,0 +1,77 @@
+/*  6. Crie um programa que leia a idade de 8 pessoas e guarde-as em um vetor. No final, mostre:              
+a) Qual é a média de idade das pessoas cadastradas
+b) Em quais posições temos pessoas com mais de 25 anos
+c) Qual foi a maior idade digitada (podem haver repetições)
+d) Em que posições digitamos a maior idade */
+let ages = [];
+for (let i = 0; i < 8; i++) {
+    let age = parseInt(prompt(`Digite a ${i + 1}º idade: `));
+    ages.push(age);
+}
+
+let sum = 0;
+for (let i = 0; i < ages.length; i++) {
+    sum += ages[i];
+}
+
+// Média das idades cadastradas
+let average = (sum / ages.length).toFixed(0);
+console.log(`A média das idades das pessoas cadastradas é: ${average}`);
+
+// Idades maiores que 25
+let ageOver25 = [];
+
+for (let i = 0; i < ages.length; i++) {
+    ages[i] > 25 ? ageOver25.push(i) && console.log(`As pessoas com mais de 25 anos estão nas posições: ${ageOver25.join("º, ")}º `) : null;
+}
+
+for (let i = 0; i < ageOver25.length; i++) {
+}
+
+// Maior idade cadastrada e em que posição se encontra
+let older = Math.max(...ages);
+let olderPositions = [];
+
+for (let i = 0; i < ages.length; i++) {
+    ages[i] === older ? olderPositions.push(i) : null;
+}
+console.log(`A maior idade é ${older} e ela se encontra na ${olderPositions.join("º, ")}º posição`);
+
+
+// 7. Faça um algoritmo que leia a nota de 10 alunos de uma turma e guarde-as em
+//     um vetor. No final, mostre:   
+//     a) Qual é a média da turma
+//     b) Quantos alunos estão acima da média da turma
+//     c) Qual foi a maior nota digitada
+//     d) Em que posições a maior nota aparece
+let grades = [];
+
+for (let i = 0; i < 10; i++) {
+    let grade = parseFloat(prompt(`Digite a nota do ${i + 1}º aluno:`));
+    grades.push(grade);
+}
+
+let sum1 = 0;
+for (let i = 0; i < grades.length; i++) {
+    sum1 += grades[i];
+}
+let average1 = sum1 / grades.length;
+console.log(`A média da turma é: ${average1.toFixed(1)}`);
+
+let aboveAverage = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] > average1) {
+        aboveAverage++;
+    }
+}
+console.log(`Quantidade de alunos acima da média: ${aboveAverage}`);
+
+let highestGrade = Math.max(...grades);
+let highestGradePositions = [];
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] === highestGrade) {
+        highestGradePositions.push(i);
+    }
+}
+console.log(`A maior nota é ${highestGrade} e ela se encontra nas posições: ${highestGradePositions.join("º, ")}º`);
+
