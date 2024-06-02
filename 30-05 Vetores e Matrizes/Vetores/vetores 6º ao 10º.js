@@ -101,3 +101,32 @@ console.log("Dados das pessoas de menores: ");
 for (let i = 0; i < names1.length; i++) {
     ages1[i] < 18 ? console.log(`Nome: ${names1[i]}, Idade: ${ages1[i]}`) : null;
 }
+
+// 10. Faça um algoritmo que leia o nome, o sexo e o salário de 5 funcionários e guarde esses dados em três vetores. No final, mostre uma listagem contendo apenas os dados das funcionárias mulheres que ganham mais de R$5 mil.
+let names2 = [];
+let sexes = [];
+let wages = [];
+
+for (let i = 0; i < 2; i++) {
+    let name = prompt(`Digite o nome do ${i + 1}º funcionário: `);
+    let sex;
+    
+    while (true) {
+        sex = prompt(`Digite o sexo do ${i + 1}º funcionário (M/F): `).toUpperCase();
+        if (sex === "F" || sex === "M") {
+            break;
+        } else {
+            alert("Sexo inválido. Digite 'M' ou 'F'.");
+        }
+    }
+
+    let wage = parseInt(prompt(`Digite o salário do ${i + 1}º funcionário: `));
+    names2.push(name);
+    sexes.push(sex);
+    wages.push(wage);
+}
+
+console.log("Dados de funcionárias que ganham mais de R$ 5.000,00: ");
+for (let i = 0; i < names2.length; i++) {
+    sexes[i] === "F" && wages[i] >= 5000 ? console.log(`Nome: ${names2[i]}, Sexo: ${sexes[i]}, Salário: R$ ${wages[i]}`) : null;
+}
