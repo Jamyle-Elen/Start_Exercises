@@ -58,3 +58,42 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(`O número ${num} foi encontrado ${count} vezes`);
+
+/*  6. Crie um programa que leia a idade de 8 pessoas e guarde-as em um vetor. No final, mostre:              
+    a) Qual é a média de idade das pessoas cadastradas
+    b) Em quais posições temos pessoas com mais de 25 anos
+    c) Qual foi a maior idade digitada (podem haver repetições)
+    d) Em que posições digitamos a maior idade */
+let ages = [];
+for (let i = 0; i < 8; i++) {
+    let age = parseInt(prompt(`Digite a ${i + 1}º idade: `));
+    ages.push(age);
+}
+
+let sum = 0;
+for (let i = 0; i < ages.length; i++) {
+    sum += ages[i];
+}
+
+// Média das idades cadastradas
+let average = (sum / ages.length).toFixed(0);
+console.log(`A média das idades das pessoas cadastradas é: ${average}`);
+
+// Idades maiores que 25
+let ageOver25 = [];
+
+for (let i = 0; i < ages.length; i++) {
+    ages[i] > 25 ? ageOver25.push(i) && console.log(`As pessoas com mais de 25 anos estão nas posições: ${ageOver25.join("º, ")} `) : null;
+}
+
+for (let i = 0; i < ageOver25.length; i++) {
+}
+
+// Maior idade cadastrada e em que posição se encontra
+let older = Math.max(...ages);
+let olderPositions = [];
+
+for (let i = 0; i < ages.length; i++) {
+    ages[i] === older ? olderPositions.push(i) : null;
+}
+console.log(`A maior idade é ${older} e ela se encontra na ${olderPositions.join("º, ")} posição`);
