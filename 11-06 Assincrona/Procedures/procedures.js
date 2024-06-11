@@ -23,6 +23,6 @@ function Maior(a, b) {
     }
 }
 
-let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
-let valor2 = parseFloat(prompt("Digite o segundo valor:"));
+let valor1 = parseFloat(prompt("Digite o primeiro valor: "));
+let valor2 = parseFloat(prompt("Digite o segundo valor: "));
 Maior(valor1, valor2);
