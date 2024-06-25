@@ -1,13 +1,8 @@
 // Implemente uma função que receba um número como parâmetro e retorne sua representação binária. Utilize essa função para converter diferentes números em binário.
-function stringToBinary(string) {
-    let binaryString = '';
-    for (let i = 0; i < string.length; i++) {
-        let binaryChar = string[i].charCodeAt(0).toString(2);
-        binaryString += binaryChar.padStart(8, '0');
-    }
-    return binaryString;
+function decimalToBinary(numero) {
+    return numero.toString(2);
 }
 
-let string = 'Jamyle Elen';
-let binary = stringToBinary(string);
-console.log(binary);
+console.log(decimalToBinary(45));
+console.log(decimalToBinary(22));
+console.log(decimalToBinary(4));
