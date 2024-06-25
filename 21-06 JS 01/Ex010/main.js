@@ -15,3 +15,4 @@ function calculateFactorial(num) {
 console.log(calculateFactorial(4));
 console.log(calculateFactorial(2));
 console.log(calculateFactorial(0));
+console.log(calculateFactorial(1));
