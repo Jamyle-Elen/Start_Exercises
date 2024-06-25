@@ -1,3 +1,4 @@
+// Implemente uma função que calcule a média aritmética de um array de números e retorne o resultado. Utilize essa função para calcular a média de diferentes conjuntos de números.
 function calculateAverage(numbers) {
     let sum = 0;
     for (let i = 0; i < numbers.length; i++) {
