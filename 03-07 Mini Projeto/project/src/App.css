@@ -4,6 +4,7 @@
 
 #root {
     --bg-color: rgb(5, 5, 5);
+    --orange-color: rgb(244, 98, 21);
 }
 
 main {
@@ -16,9 +17,11 @@ main {
 main .home {
     border: red solid;
     display: flex;
+    max-width: 1200px;
     align-items: center;
     margin: 0 200px 0 200px;
     color: var(--text-color);
+    justify-content: space-between;
 }
 
 main .home h1 {
@@ -27,5 +30,15 @@ main .home h1 {
 }
 
 .start {
-    width: 300px;
+    width: 450px;
+    border: yellow solid;
+}
+
+.start span {
+    color: var(--orange-color);
+}
+
+img {
+    border: green solid;
+    
 }
